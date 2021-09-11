@@ -8,9 +8,9 @@ public class TP2 {
         Scanner entrada = new Scanner(System.in);  
         int minutos = entrada.nextInt();  //Ingresar valor en minutos.
 
-        double d=minutos/60/24; //Obtener. 
-        int a=(int)d/365; //Obtener la cantidad de años.
-		d= d%365;
+        int a = minutos / 525600;
+        int d = a * 365;
+
 		System.out.println("La cantidad de años es: "+ a + " y la cant de dias es: " + d);
         
 
@@ -36,11 +36,11 @@ public class TP2 {
         //PUNTO 3
         System.out.println("Ingreser valor 1: ");
         Scanner entrada2 = new Scanner(System.in); //Ingresar el primer valor.
-        float valor1 = entrada.nextFloat();
+        float valor1 = entrada.nextInt();
 
         System.out.println("Ingreser valor 2: ");
         Scanner entrada3 = new Scanner(System.in); //Ingresar el segundo valor.
-        float valor2 = entrada.nextFloat();
+        float valor2 = entrada.nextInt();
 
         System.out.println("Suma: " + (valor1 + valor2));  //sumar.
         System.out.println("Resta: " + (valor1 - valor2));  //restar.
