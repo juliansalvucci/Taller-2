@@ -1,0 +1,34 @@
+public abstract class Gestor() {
+   public void guardar(){
+      //Guardar en BD
+      //baseDeDatos.guardar()
+   }
+}
+
+public class GestorPerro extends Gestor {
+
+   @Override
+   public void guardar(){
+      super.guardar();  //indica el método guardar() del padre, sino se buclearía.
+   }
+}
+
+------------------------------------------------------
+
+public abstract class Gestor() {
+   public String guardar(){
+      //Guardar en BD
+      //baseDeDatos.guardar()
+      return "GuardarPadre";
+   }
+}
+
+public class GestorPerro extends Gestor {
+
+   @Override
+   public String guardar(){
+      super.guardar();  //indica el método guardar() del padre, sino se buclearía.
+      
+      return "GuardarPadre" + "OtraCosa"
+   }
+}
