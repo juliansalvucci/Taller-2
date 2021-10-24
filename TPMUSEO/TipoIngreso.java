@@ -2,18 +2,18 @@ package TPMUSEO;
 
 public class TipoIngreso 
 {
-    private String descripcion;
+    private String descripcionTipoIngreso;
     private String nombre;
 
-    public TipoIngreso(String descripcion, String nombre)
+    public TipoIngreso(String descripcionTipoIngreso, String nombre)
     {
-        this.descripcion;
-        this.nombre;
+        this.descripcionTipoIngreso = descripcionTipoIngreso;
+        this.nombre = nombre;
     }
 
     public String getDescripcion()
     {
-        return this.descripcion;
+        return this.descripcionTipoIngreso;
     }
 
     public String getNombre()
@@ -21,9 +21,9 @@ public class TipoIngreso
         return this.nombre;
     }
 
-    public void setDescripcion(String descripcion)
+    public void setDescripcion(String descripcionTipoIngreso)
     {
-        this.descripcion = descripcion;
+        this.descripcionTipoIngreso = descripcionTipoIngreso;
     }
     
     public void setNombre(String nombre)
