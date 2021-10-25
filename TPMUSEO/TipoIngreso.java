@@ -4,13 +4,21 @@ public class TipoIngreso
 {
     private String descripcionTipoIngreso;
     private String nombre;
+    
+    //CONSTRUCTOR SIN PARÁMETROS
+    public TipoIngreso()
+    {
 
+    }
+
+    //CONSTRUCTOR CON PARÁMETROS
     public TipoIngreso(String descripcionTipoIngreso, String nombre)
     {
         this.descripcionTipoIngreso = descripcionTipoIngreso;
         this.nombre = nombre;
     }
 
+    /*------GETTERS------*/
     public String getDescripcion()
     {
         return this.descripcionTipoIngreso;
@@ -19,15 +27,5 @@ public class TipoIngreso
     public String getNombre()
     {
         return this.nombre;
-    }
-
-    public void setDescripcion(String descripcionTipoIngreso)
-    {
-        this.descripcionTipoIngreso = descripcionTipoIngreso;
-    }
-    
-    public void setNombre(String nombre)
-    {
-        this.nombre = nombre;
     }
 }

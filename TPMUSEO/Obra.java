@@ -6,35 +6,41 @@ public class Obra
     private int alto;
     private int ancho;
     private int codigoSensor;
-    private String descripcion;
+    private String descripcionObra;
+    private Double duracion;
     private String nombreObra;
     private double peso;
     private double valuacion;
 
+
+    //PUNTERO
     private TipoIngreso tipoIngreso;
 
-    public Obra(int alto, int ancho, int codigoSensor, String descripcion, String nombreObra, double peso, double valuacion, String descripcionTipoObra, String nombre)
-    {
-        this.setAlto(alto);
-        this.setAncho(ancho);
-        this.setCodigoSensor(codigoSensor);
-        this.setDescripcion(descripcion);
-        this.setNombreObra(nombreObra);
-        this.setPeso(peso);
-        this.setValuacion(valuacion);
 
-        setTipoIngreso(new TipoIngreso(nombre, descripcionTipoObra));
+    //CONSTRUCTOR SIN PARÁMETROS
+    public Obra()
+    {
+
     }
 
-    /*GETTERS Y SETTERS*/
+    //CONSTRUCTOR CON PARÁMETROS
+    public Obra(int alto, int ancho, int codigoSensor, String descripcionObra, Double duracion, String nombreObra, double peso, double valuacion)
+    {
+        this.alto = alto;
+        this.ancho = ancho;
+        this.codigoSensor = codigoSensor;
+        this.descripcionObra = descripcionObra;
+        this.duracion = duracion;
+        this.nombreObra = nombreObra;
+        this.peso = peso;
+        this.valuacion = valuacion;
+    }
+
+    /*------GETTERS------*/
 
     public TipoIngreso getTipoIngreso() 
     {
         return tipoIngreso;
-    }
-
-    public void setTipoIngreso(TipoIngreso tipoIngreso) {
-        this.tipoIngreso = tipoIngreso;
     }
 
     public double getValuacion()
@@ -42,19 +48,9 @@ public class Obra
         return valuacion;
     }
 
-    public void setValuacion(double valuacion) 
-    {
-        this.valuacion = valuacion;
-    }
-
     public double getPeso() 
     {
         return peso;
-    }
-
-    public void setPeso(double peso) 
-    {
-        this.peso = peso;
     }
 
     public String getNombreObra() 
@@ -62,19 +58,14 @@ public class Obra
         return nombreObra;
     }
 
-    public void setNombreObra(String nombreObra) 
+    public String getDescripcionObra() 
     {
-        this.nombreObra = nombreObra;
+        return descripcionObra;
     }
 
-    public String getDescripcion() 
+    public Double getDuracion()
     {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) 
-    {
-        this.descripcion = descripcion;
+        return duracion;
     }
 
     public int getCodigoSensor() 
@@ -82,19 +73,9 @@ public class Obra
         return codigoSensor;
     }
 
-    public void setCodigoSensor(int codigoSensor) 
-    {
-        this.codigoSensor = codigoSensor;
-    }
-
     public int getAncho() 
     {
         return ancho;
-    }
-
-    public void setAncho(int ancho) 
-    {
-        this.ancho = ancho;
     }
 
     public int getAlto() 
@@ -102,8 +83,4 @@ public class Obra
         return alto;
     }
 
-    public void setAlto(int alto) 
-    {
-        this.alto = alto;
-    }
 }
