@@ -1,13 +1,17 @@
 package TPMUSEO;
 
+import java.util.Date;
 
 public class Obra 
 {
-    private int alto;
-    private int ancho;
-    private int codigoSensor;
+    private double alto;
+    private double ancho;
+    private String codigoSensor;
     private String descripcionObra;
-    private Double duracion;
+    private int duracionExtendida;
+    private int duracionResumida;
+    private Date fechaCreacion;
+    private Date fechaPrimerIngreso;
     private String nombreObra;
     private double peso;
     private double valuacion;
@@ -16,71 +20,175 @@ public class Obra
     //PUNTERO
     private TipoIngreso tipoIngreso;
 
+    private List<PrestamoMuseo> prestamoMuseo = new LinkedList<>;
+
 
     //CONSTRUCTOR SIN PARÁMETROS
     public Obra()
     {
 
     }
-
+    
     //CONSTRUCTOR CON PARÁMETROS
-    public Obra(int alto, int ancho, int codigoSensor, String descripcionObra, Double duracion, String nombreObra, double peso, double valuacion)
+    public Obra(double alto, double ancho, String codigoSensor, String descripcionObra, int duracionExtendida, int duracionResumida, Date fechaCreacion, Date fechaPrimerIngreso, String nombreObra, double peso, double valuacion, TipoIngreso tipoIngreso)
     {
-        this.alto = alto;
-        this.ancho = ancho;
-        this.codigoSensor = codigoSensor;
-        this.descripcionObra = descripcionObra;
-        this.duracion = duracion;
-        this.nombreObra = nombreObra;
-        this.peso = peso;
-        this.valuacion = valuacion;
+        this.setAlto(alto);
+        this.setAncho(ancho);
+        this.setCodigoSensor(codigoSensor);
+        this.setDescripcionObra(descripcionObra);
+        this.setDuracionExtendida(duracionExtendida);
+        this.setDuracionResumida(duracionResumida);
+        this.setFechaCreacion(fechaCreacion);
+        this.setFechaPrimerIngreso(fechaPrimerIngreso);
+        this.setNombreObra(nombreObra);
+        this.setPeso(peso);
+        this.setValuacion(valuacion);
+        this.setTipoIngreso(tipoIngreso);
     }
 
-    /*------GETTERS------*/
+    /*------GETTERS Y SETTERS------*/
 
     public TipoIngreso getTipoIngreso() 
     {
         return tipoIngreso;
     }
 
-    public double getValuacion()
+
+    public void setTipoIngreso(TipoIngreso tipoIngreso) 
     {
+        this.tipoIngreso = tipoIngreso;
+    }
+
+
+    public double getValuacion() {
         return valuacion;
     }
+
+
+    public void setValuacion(double valuacion) 
+    {
+        this.valuacion = valuacion;
+    }
+
 
     public double getPeso() 
     {
         return peso;
     }
 
+
+    public void setPeso(double peso) 
+    {
+        this.peso = peso;
+    }
+
+
     public String getNombreObra() 
     {
         return nombreObra;
     }
+
+
+    public void setNombreObra(String nombreObra) 
+    {
+        this.nombreObra = nombreObra;
+    }
+
+
+    public Date getFechaPrimerIngreso() 
+    {
+        return fechaPrimerIngreso;
+    }
+
+
+    public void setFechaPrimerIngreso(Date fechaPrimerIngreso) 
+    {
+        this.fechaPrimerIngreso = fechaPrimerIngreso;
+    }
+
+
+    public Date getFechaCreacion() 
+    {
+        return fechaCreacion;
+    }
+
+
+    public void setFechaCreacion(Date fechaCreacion) 
+    {
+        this.fechaCreacion = fechaCreacion;
+    }
+
+
+    public int getDuracionResumida() 
+    {
+        return duracionResumida;
+    }
+
+
+    public void setDuracionResumida(int duracionResumida) 
+    {
+        this.duracionResumida = duracionResumida;
+    }
+
+
+    public int getDuracionExtendida() 
+    {
+        return duracionExtendida;
+    }
+
+
+    public void setDuracionExtendida(int duracionExtendida) 
+    {
+        this.duracionExtendida = duracionExtendida;
+    }
+
+
+    public double getAncho() 
+    {
+        return ancho;
+    }
+
+
+    public void setAncho(double ancho) 
+    {
+        this.ancho = ancho;
+    }
+
 
     public String getDescripcionObra() 
     {
         return descripcionObra;
     }
 
-    public Double getDuracion()
+
+    public void setDescripcionObra(String descripcionObra) 
     {
-        return duracion;
+        this.descripcionObra = descripcionObra;
     }
 
-    public int getCodigoSensor() 
+
+    public String getCodigoSensor() 
     {
         return codigoSensor;
     }
 
-    public int getAncho() 
+
+    public void setCodigoSensor(String codigoSensor) 
     {
-        return ancho;
+        this.codigoSensor = codigoSensor;
     }
 
-    public int getAlto() 
+
+    public double getAlto() 
     {
         return alto;
     }
 
+
+    public void setAlto(double alto) 
+    {
+        this.alto = alto;
+    }
+
+   
 }

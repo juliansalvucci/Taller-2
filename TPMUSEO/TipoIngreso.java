@@ -14,18 +14,31 @@ public class TipoIngreso
     //CONSTRUCTOR CON PARÁMETROS
     public TipoIngreso(String descripcionTipoIngreso, String nombre)
     {
-        this.descripcionTipoIngreso = descripcionTipoIngreso;
+        this.setDescripcionTipoIngreso(descripcionTipoIngreso);
+        this.setNombre(nombre);
+    }
+
+    /*------GETTERS Y SETTERS------*/
+
+    
+    public String getNombre() 
+    {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) 
+    {
         this.nombre = nombre;
     }
 
-    /*------GETTERS------*/
-    public String getDescripcion()
+    public String getDescripcionTipoIngreso() 
     {
-        return this.descripcionTipoIngreso;
+        return descripcionTipoIngreso;
     }
 
-    public String getNombre()
+    public void setDescripcionTipoIngreso(String descripcionTipoIngreso) 
     {
-        return this.nombre;
+        this.descripcionTipoIngreso = descripcionTipoIngreso;
     }
+    
 }
