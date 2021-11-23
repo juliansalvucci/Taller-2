@@ -1,6 +1,8 @@
 package TPMUSEO;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Obra 
 {
@@ -20,7 +22,7 @@ public class Obra
     //PUNTERO
     private TipoIngreso tipoIngreso;
 
-    private List<PrestamoMuseo> prestamoMuseo = new LinkedList<>;
+    private List<PrestamoMuseo> prestamoMuseo = new ArrayList<>();
 
 
     //CONSTRUCTOR SIN PARÁMETROS
@@ -29,6 +31,7 @@ public class Obra
 
     }
     
+
     //CONSTRUCTOR CON PARÁMETROS
     public Obra(double alto, double ancho, String codigoSensor, String descripcionObra, int duracionExtendida, int duracionResumida, Date fechaCreacion, Date fechaPrimerIngreso, String nombreObra, double peso, double valuacion, TipoIngreso tipoIngreso)
     {
@@ -190,5 +193,13 @@ public class Obra
         this.alto = alto;
     }
 
+    //Relación obra - prestamoMuseo
+    public List<PrestamoMuseo> getPrestamoMuseo() {
+        return prestamoMuseo;
+    }
+
+    public void setPrestamoMuseo(List<PrestamoMuseo> prestamoMuseo) {
+        this.prestamoMuseo = prestamoMuseo;
+    }
    
 }
